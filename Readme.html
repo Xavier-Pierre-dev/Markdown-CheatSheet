@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Readme.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%F0%9F%93%9A-markdown-cheatsheet----omit-in-toc">📚 Markdown cheatsheet <!-- omit in TOC --></h1>
+<ul>
+<li><a href="#-api-documentation-using-markdown">📈 API documentation using markdown</a>
+<ul>
+<li><a href="#post">POST</a></li>
+<li><a href="#put">PUT</a></li>
+<li><a href="#get">GET</a></li>
+<li><a href="#delete">DELETE</a></li>
+</ul>
+</li>
+<li><a href="#-markdown-note">📝 Markdown note</a>
+<ul>
+<li><a href="#note">note</a></li>
+<li><a href="#tips">tips</a></li>
+<li><a href="#warning">warning</a></li>
+</ul>
+</li>
+<li><a href="#-badge">📛 Badge</a>
+<ul>
+<li><a href="#badgen">badgen</a></li>
+<li><a href="#shieldio">shield.io</a></li>
+<li><a href="#forthebadge">forthebadge</a></li>
+</ul>
+</li>
+<li><a href="#-markdown-emojis">😃 Markdown emojis</a>
+<ul>
+<li><a href="#wich-emojis-to-use-for-commit-">Wich emojis to use for commit ?</a></li>
+<li><a href="#emojis-integrations">Emojis Integrations</a></li>
+</ul>
+</li>
+<li><a href="#-mermaid">📊 Mermaid</a>
+<ul>
+<li><a href="#examples">Examples</a>
+<ul>
+<li><a href="#flowchart">Flowchart</a></li>
+<li><a href="#sequence-diagram">Sequence diagram</a></li>
+<li><a href="#gantt-chart">Gantt chart</a></li>
+<li><a href="#class-diagram">Class diagram</a></li>
+<li><a href="#state-diagram">State diagram</a></li>
+<li><a href="#pie-chart">Pie chart</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%EF%B8%8F-basic-markdwown-synthaxe">✒️ Basic markdwown synthaxe</a></li>
+</ul>
+<br>
+<h2 id="%F0%9F%93%88-api-documentation-using-markdown">📈 API documentation using markdown</h2>
+<p>Recently I search how to write API documentation using markdown file and I find an awesome project here :</p>
+<div align="center">
+<p><img src="logo.png" alt="image"></p>
+</div>
+<ul>
+<li>https://github.com/rigwild/apidoc-markdown</li>
+</ul>
+<p>This project uses apiDoc to work, basically that's allow you to generate automatrically your API documentation using comment inside your code following a certain synthaxe</p>
+<ul>
+<li><a href="https://github.com/apidoc/apidoc">[apiDoc - github]</a></li>
+<li><a href="https://apidocjs.com/">[apiDoc - documentation]</a></li>
+</ul>
+<p>By the way this project have also some converter in order to convert your apiDoc and all of them using <a href="https://github.com/apidoc/apidoc-core">apidoc-core</a> internally :</p>
+<table>
+<thead>
+<tr>
+<th>repo github</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/fsbahman/apidoc-swagger">apidoc-swagger</a></td>
+<td>It uses apidoc to convert inline documentation comments into json schema and later convert it to swagger json schema.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/amanoooo/apidoc-swagger-3">apidoc-swagger-3</a></td>
+<td>It uses apidoc to convert inline documentation comments into json schema and later convert it to swagger json schema. (inspired by apidoc-swagger)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/fsbahman/gulp-apidoc-swagger">gulp-apidoc-swagger</a></td>
+<td>Swagger json schema generator via apidoc</td>
+</tr>
+<tr>
+<td><a href="https://github.com/bonzzy/docmaster">Docmaster</a></td>
+<td>Docmaster exports Postman collection to Apidoc format</td>
+</tr>
+<tr>
+<td><a href="https://github.com/rigwild/apidoc-markdown">apidoc-markdown</a></td>
+<td>apidoc-markdown uses apiDoc internally. To generate your Markdown documentation, using apiDoc comments inside your code.</td>
+</tr>
+</tbody>
+</table>
+<p>I find apidoc-markdown really awesome but the proposed template doesn't look that good so I was searching way to present API documentation in markdown.</p>
+<p>I wasn't able to find something really nice so I create some sample getting inspiration from swagger style documentation. In order to do this I use inline css directly inside html and markdown as the same time.</p>
+<p>Like apidoc-markdown use EJS template file in reality you can create awesome template with that like you can use javascript synthaxe inside your template to add logic. In futur, I will certainly create a template for apidoc-markdown but for the moment I just create some reflexion sample :</p>
+<p><strong>That's will work only if you use an extension like markdown-viewer or if you read the markdown file using visual studio code</strong></p>
+<h3 id="post">POST</h3>
+<table>
+<thead>
+<tr>
+<th>Not extended</th>
+<th>Extended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="POST_NotExtended.PNG" alt="image"></td>
+<td><img src="POST_Extended.PNG" alt="image"></td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary style="color:transparent;">
+<pre class="notranslate" style="background-color:green; color: white;display:flex; flex-direction: row;">            
+<div style="padding:5px; background-color:lightgreen;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:green;"> POST </div>
+<div style="padding:5px;">/define</div>
+<div style="padding:5px;  ">🔐</div>
+</pre></summary>
+<div style="border:dashed green; border-radius: 0px 0px 5px 5px; border-top:transparent; position:relative; top: -17px; background-color: transparence; padding: 17px 17px 17px 17px">
+<p>Some content here...</p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details>
+<summary>POST code</summary>
+<pre class="hljs"><code><div>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color:transparent;"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"notranslate"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color:green; color: white;display:flex; flex-direction: row;"</span>&gt;</span>            
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px; background-color:lightgreen;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:green;"</span>&gt;</span> POST <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px;"</span>&gt;</span>/define<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px;  "</span>&gt;</span>🔐<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"border:dashed green; border-radius: 0px 0px 5px 5px; border-top:transparent; position:relative; top: -17px; background-color: transparence; padding: 17px 17px 17px 17px"</span>&gt;</span>
+
+Some content here...
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+
+|Name|Type|Description|
+|---|---|---|
+||||
+||||
+||||
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+</div></code></pre>
+</details>
+<br>
+<h3 id="put">PUT</h3>
+<table>
+<thead>
+<tr>
+<th>Not extended</th>
+<th>Extended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="PUT_NotExtended.PNG" alt="image"></td>
+<td><img src="PUT_Extended.PNG" alt="image"></td>
+</tr>
+</tbody>
+</table>
+<details>
+    <summary style="color:transparent;">
+        <pre class="notranslate" style="background-color:orange; color: white;display:flex; flex-direction: row;">            
+        <div style="padding:5px; background-color:#fed8b1;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:orange;"> PUT </div>
+        <div style="padding:5px;">/define</div>
+        <div style="padding:5px;  ">🔐</div>
+</pre></summary>
+<div style="border:dashed orange; border-radius: 0px 0px 5px 5px; border-top:transparent; position:relative; top: -17px; background-color: transparence; padding: 17px 17px 17px 17px">
+<p>Some content here...</p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details>
+<summary>PUT code</summary>
+<pre class="hljs"><code><div>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color:transparent;"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"notranslate"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color:orange; color: white;display:flex; flex-direction: row;"</span>&gt;</span>            
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px; background-color:#fed8b1;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:orange;"</span>&gt;</span> PUT <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px;"</span>&gt;</span>/define<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px;  "</span>&gt;</span>🔐<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"border:dashed orange; border-radius: 0px 0px 5px 5px; border-top:transparent; position:relative; top: -17px; background-color: transparence; padding: 17px 17px 17px 17px"</span>&gt;</span>
+
+Some content here...
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+
+|Name|Type|Description|
+|---|---|---|
+||||
+||||
+||||
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+</div></code></pre>
+</details>
+<br>
+<h3 id="get">GET</h3>
+<table>
+<thead>
+<tr>
+<th>Not extended</th>
+<th>Extended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="GET_NotExtended.PNG" alt="image"></td>
+<td><img src="GET_Extended.PNG" alt="image"></td>
+</tr>
+</tbody>
+</table>
+<details>
+    <summary style="color:transparent;">
+        <pre class="notranslate" style="background-color:#1565c0; color: white;display:flex; flex-direction: row;">            
+        <div style="padding:5px; background-color:lightblue;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:#1565c0;"> GET </div>
+        <div style="padding:5px;">/define</div>
+        <div style="padding:5px;  ">🔐</div>
+</pre></summary>
+<div style="border:dashed #1565c0; border-radius: 0px 0px 5px 5px; border-top:transparent; position:relative; top: -17px; background-color: transparence; padding: 17px 17px 17px 17px">
+<p>Some content here...</p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details>
+<summary>GET code</summary>
+<pre class="hljs"><code><div>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color:transparent;"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"notranslate"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color:#1565c0; color: white;display:flex; flex-direction: row;"</span>&gt;</span>            
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px; background-color:lightblue;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:#1565c0;"</span>&gt;</span> GET <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px;"</span>&gt;</span>/define<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px;  "</span>&gt;</span>🔐<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"border:dashed #1565c0; border-radius: 0px 0px 5px 5px; border-top:transparent; position:relative; top: -17px; background-color: transparence; padding: 17px 17px 17px 17px"</span>&gt;</span>
+
+Some content here...
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+
+|Name|Type|Description|
+|---|---|---|
+||||
+||||
+||||
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+</div></code></pre>
+</details>
+<br>
+<h3 id="delete">DELETE</h3>
+<table>
+<thead>
+<tr>
+<th>Not extended</th>
+<th>Extended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="DELETE_NotExtended.PNG" alt="image"></td>
+<td><img src="DELETE_Extended.PNG" alt="image"></td>
+</tr>
+</tbody>
+</table>
+<details>
+    <summary style="color:transparent;">
+        <pre class="notranslate" style="background-color:red; color: white;display:flex; flex-direction: row;">            
+        <div style="padding:5px; background-color:#f2bbc5;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:red;"> DELETE </div>
+        <div style="padding:5px;">/define</div>
+        <div style="padding:5px;  ">🔐</div>
+</pre></summary>
+<div style="border:dashed red; border-radius: 0px 0px 5px 5px; border-top:transparent; position:relative; top: -17px; background-color: transparence; padding: 17px 17px 17px 17px">
+<p>Some content here...</p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details>
+<summary>DELETE code</summary>
+<pre class="hljs"><code><div>
+<span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">summary</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color:transparent;"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">pre</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"notranslate"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color:red; color: white;display:flex; flex-direction: row;"</span>&gt;</span>            
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px; background-color:#f2bbc5;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:red;"</span>&gt;</span> DELETE <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px;"</span>&gt;</span>/define<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"padding:5px;  "</span>&gt;</span>🔐<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"border:dashed red; border-radius: 0px 0px 5px 5px; border-top:transparent; position:relative; top: -17px; background-color: transparence; padding: 17px 17px 17px 17px"</span>&gt;</span>
+
+Some content here...
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span>
+
+|Name|Type|Description|
+|---|---|---|
+||||
+||||
+||||
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span>
+</div></code></pre>
+</details>
+<br>
+<br>
+<hr>
+<h2 id="%F0%9F%93%9D-markdown-note">📝 Markdown note</h2>
+<p>It's also possible to use html inside markdown in order to enhance the readability of your document, here it's few example :</p>
+<h3 id="note">note</h3>
+<div style="color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px;">
+<div style="font-size:200%; float:left;">📝</div>
+<div>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+</div>
+</div>
+<details>
+<summary>code</summary>
+<pre class="hljs"><code><div>&lt;div style=&quot;color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px;&quot;&gt;
+&lt;div style=&quot;font-size:200%; float:left;&quot;&gt;📝&lt;/div&gt;
+&lt;div&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+&lt;/div&gt;
+&lt;/div&gt;
+</div></code></pre>
+</details>
+<div style="display:flex; color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column;">
+<div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #0C5460">📝 Note : </div>
+<div>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+</div>
+</div>
+<details>
+<summary>code</summary>
+<pre class="hljs"><code><div>&lt;div style=&quot;display:flex; color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column;&quot;&gt;
+&lt;div style=&quot;font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #0C5460&quot;&gt;📝 Note : &lt;/div&gt;
+&lt;div&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+&lt;/div&gt;
+&lt;/div&gt;
+</div></code></pre>
+</details>
+<br>
+<h3 id="tips">tips</h3>
+<div style="background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; color: #155724">
+<div style="font-size:200%; float:left; ">💡</div>
+<div>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+</div>
+</div>
+<details>
+<summary>code</summary>
+<pre class="hljs"><code><div>&lt;div style=&quot;background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; color: #155724&quot;&gt;
+&lt;div style=&quot;font-size:200%; float:left; &quot;&gt;💡&lt;/div&gt;
+&lt;div&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+&lt;/div&gt;
+&lt;/div&gt;
+</div></code></pre>
+</details>
+<div style="display:flex; background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #155724">
+<div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #155724">💡 Tip : </div>
+<div>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+</div>
+</div>
+<details>
+<summary>code</summary>
+<pre class="hljs"><code><div>&lt;div style=&quot;display:flex; background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #155724&quot;&gt;
+&lt;div style=&quot;font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #155724&quot;&gt;💡 Tip : &lt;/div&gt;
+
+&lt;div&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+&lt;/div&gt;
+&lt;/div&gt;
+</div></code></pre>
+</details>
+<br>
+<h3 id="warning">warning</h3>
+<div style="background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; color: #ffe0b2">
+<div style="font-size:200%; float:left; ">⚠️</div>
+<div>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+</div>
+</div>
+<details>
+<summary>code</summary>
+<pre class="hljs"><code><div>&lt;div style=&quot;background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; color: #ffe0b2&quot;&gt;
+&lt;div style=&quot;font-size:200%; float:left; &quot;&gt;⚠️&lt;/div&gt;
+&lt;div&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+&lt;/div&gt;
+&lt;/div&gt;
+</div></code></pre>
+</details>
+<div style="display:flex; background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #ffe0b2">
+<div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #ffe0b2">⚠️ Warning : </div>
+<div>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+</div>
+</div>
+<details>
+<summary>code</summary>
+<pre class="hljs"><code><div>&lt;div style=&quot;display:flex; background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #ffe0b2&quot;&gt;
+&lt;div style=&quot;font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #ffe0b2&quot;&gt;⚠️ Warning : &lt;/div&gt;
+
+&lt;div&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
+&lt;/div&gt;
+&lt;/div&gt;
+</div></code></pre>
+</details>
+<br>
+<br>
+<hr>
+<h2 id="%F0%9F%93%9B-badge">📛 Badge</h2>
+<p>You may have seen some badges on famous repos while browsing github. Here is how you can add them on your own READMEs.md</p>
+<ul>
+<li>https://shields.io/</li>
+<li>https://badgen.net/</li>
+<li>https://forthebadge.com/</li>
+</ul>
+<p>example :</p>
+<p><a href="https://github.com/"><img src="https://img.shields.io/badge/Java-#FFac45.svg?&amp;style=for-the-badge&amp;logo=java&amp;logoColor=white&amp;color=yellow" alt="Java"></a>  <a href="https://github.com/"><img src="https://img.shields.io/badge/HTML-#FFac45.svg?&amp;style=for-the-badge&amp;logo=html5&amp;logoColor=white&amp;color=orange" alt="HTML"></a>
+<a href="https://github.com/"><img src="https://img.shields.io/badge/CSS-#FFac45.svg?&amp;style=for-the-badge&amp;logo=css3&amp;logoColor=white&amp;color=blue" alt="CSS"></a>
+<a href="https://github.com/"><img src="https://img.shields.io/badge/JAVASCRIPT-#FFac45.svg?&amp;style=for-the-badge&amp;logo=javascript&amp;logoColor=white&amp;color=yellow" alt="JavaScript"></a></p>
+<h3 id="badgen">badgen</h3>
+<pre class="hljs"><code><div>https://badgen.net/badge/:subject/:status/:color?icon=github
+                   ──┬──  ───┬───  ──┬───  ──┬── ────┬──────
+                     │       │       │       │       └─ Options (label, list, icon, color)
+                     │       │       │       │
+                     │      TEXT    TEXT    RGB / COLOR_NAME ( optional )
+                     │
+                  &quot;badge&quot; - default (static) badge generator
+</div></code></pre>
+<p>some example :</p>
+<table>
+<thead>
+<tr>
+<th>badge</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://badgen.net/github/release/babel/babel" alt="badge"></td>
+<td><code>![badge](https://badgen.net/github/release/babel/babel)</code></td>
+</tr>
+<tr>
+<td><img src="https://badgen.net/badge/icon/docker/green?icon=docker&amp;label" alt="docker"></td>
+<td><code>![docker](https://badgen.net/badge/icon/docker/green?icon=docker&amp;label)</code></td>
+</tr>
+<tr>
+<td><img src="https://badgen.net/badge/icon/dependabot?icon=dependabot&amp;label=example" alt="dependabot"></td>
+<td><code>![dependabot](https://badgen.net/badge/icon/dependabot?icon=dependabot&amp;label=example)</code></td>
+</tr>
+</tbody>
+</table>
+<br>
+<h3 id="shieldio">shield.io</h3>
+<pre class="hljs"><code><div>https://img.shields.io/badge/:label-:message-:color?style=for-the-badge&amp;logo=appveyor
+                       ──┬──  ───┬─── ──┬───  ──┬── ────┬────────────────────────────
+                         │       │      │       │       └─ Options (label, style, logo, color)
+                         │       │      │       │
+                         │      TEXT   TEXT    RGB / COLOR_NAME ( optional )
+                         │
+                  &quot;badge&quot; - default (static) badge generator
+</div></code></pre>
+<p>some example :</p>
+<table>
+<thead>
+<tr>
+<th>badge</th>
+<th>code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://img.shields.io/badge/test-Hello World-green" alt="a"></td>
+<td><code>![badge](https://img.shields.io/badge/test-Hello%20World-green)</code></td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/test-hello-orange?style=for-the-badge&amp;logo=appveyor" alt="a"></td>
+<td><code>![a](https://img.shields.io/badge/test-hello-orange?style=for-the-badge&amp;logo=appveyor)</code></td>
+</tr>
+</tbody>
+</table>
+<br>
+<h3 id="forthebadge">forthebadge</h3>
+<p>with forthebadge you can simply use a generator here : https://forthebadge.com/generator/</p>
+<p>example :</p>
+<p><a href="https://forthebadge.com"><img src="https://forthebadge.com/images/badges/contains-cat-gifs.svg" alt="forthebadge"></a></p>
+<br>
+<br>
+<hr>
+<h2 id="%F0%9F%98%83-markdown-emojis">😃 Markdown emojis</h2>
+<p>For markdown emojis list you can find the list here :</p>
+<ul>
+<li>https://api.github.com/emojis</li>
+<li>https://emojipedia.org/github/</li>
+<li>https://unicode.org/emoji/charts/full-emoji-list.html</li>
+<li>https://www.webfx.com/tools/emoji-cheat-sheet/</li>
+<li>https://github.com/yodamad/gitlab-emoji</li>
+<li>https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md</li>
+</ul>
+<p>Here again you can find an initiative trying to standardise the way to use emojis on github commit messages with gitmoji :</p>
+<div align="center">
+<p><img src="gitmoji_logo.gif" alt="image"></p>
+</div>
+<ul>
+<li><a href="https://github.com/carloscuesta/gitmoji">github - gitmoji</a></li>
+<li><a href="https://gitmoji.dev/">gitmoji</a></li>
+<li><a href="https://engineeringfordatascience.com/posts/gitmoji/">gitmoji - quick start article</a></li>
+<li>https://github.com/dannyfritz/commit-message-emoji</li>
+</ul>
+<br>
+<h3 id="wich-emojis-to-use-for-commit">Wich emojis to use for commit ?</h3>
+<p>You can add emojis to any commit message by using the CLDR Short Name or unicode of the emoji in the commit message text.</p>
+<p>For example :</p>
+<pre class="hljs"><code><div> git commit -m &quot;:bug: Fixed formatting error on home page&quot; 
+</div></code></pre>
+<p>would render as :</p>
+<p>🐛 Fixed formatting error on home page</p>
+<br>
+<p>Here you can find a list of emoji that you can use for commit message : https://github.com/dannyfritz/commit-message-emoji</p>
+<table>
+<thead>
+<tr>
+<th>Commit Type</th>
+<th>Emoji</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial Commit</td>
+<td><a href="http://emojipedia.org/party-popper/">🎉 Party Popper</a></td>
+</tr>
+<tr>
+<td>Version Tag</td>
+<td><a href="http://emojipedia.org/bookmark/">🔖 Bookmark</a></td>
+</tr>
+<tr>
+<td>New Feature</td>
+<td><a href="http://emojipedia.org/sparkles/">✨ Sparkles</a></td>
+</tr>
+<tr>
+<td>Bugfix</td>
+<td><a href="http://emojipedia.org/bug/">🐛 Bug</a></td>
+</tr>
+<tr>
+<td>Security Fix</td>
+<td><a href="https://emojipedia.org/lock/">🔒 Lock</a></td>
+</tr>
+<tr>
+<td>Metadata</td>
+<td><a href="http://emojipedia.org/card-index/">📇 Card Index</a></td>
+</tr>
+<tr>
+<td>Refactoring</td>
+<td><a href="http://emojipedia.org/black-universal-recycling-symbol/">♻️ Black Universal Recycling Symbol</a></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><a href="http://emojipedia.org/books/">📚 Books</a></td>
+</tr>
+<tr>
+<td>Internationalization</td>
+<td><a href="http://emojipedia.org/globe-with-meridians/">🌐 Globe With Meridians</a></td>
+</tr>
+<tr>
+<td>Accessibility</td>
+<td><a href="https://emojipedia.org/wheelchair-symbol/">♿ Wheelchair</a></td>
+</tr>
+<tr>
+<td>Performance</td>
+<td><a href="http://emojipedia.org/horse/">🐎 Horse</a></td>
+</tr>
+<tr>
+<td>Cosmetic</td>
+<td><a href="http://emojipedia.org/artist-palette/">🎨 Artist Palette</a></td>
+</tr>
+<tr>
+<td>Tooling</td>
+<td><a href="http://emojipedia.org/wrench/">🔧 Wrench</a></td>
+</tr>
+<tr>
+<td>Tests</td>
+<td><a href="http://emojipedia.org/police-cars-revolving-light/">🚨 Police Cars Revolving Light</a></td>
+</tr>
+<tr>
+<td>Deprecation</td>
+<td><a href="http://emojipedia.org/pile-of-poo/">💩 Pile of Poo</a></td>
+</tr>
+<tr>
+<td>Removal</td>
+<td><a href="http://emojipedia.org/wastebasket/">🗑️ Wastebasket</a></td>
+</tr>
+<tr>
+<td>Work In Progress (WIP)</td>
+<td><a href="http://emojipedia.org/construction-sign/">🚧 Construction Sign</a></td>
+</tr>
+</tbody>
+</table>
+<br>
+<h3 id="emojis-integrations">Emojis Integrations</h3>
+<p>you can find a lot of way to use emoji here : https://github.com/dannyfritz/commit-message-emoji/blob/master/INTEGRATIONS.md</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>emojis keyboard shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OSX</td>
+<td><code>ctrl</code>+<code>⌘</code>+<code>space</code></td>
+</tr>
+<tr>
+<td>Windows</td>
+<td><code>Win</code>+<code>.</code></td>
+</tr>
+<tr>
+<td>Ubuntu 20</td>
+<td><code>super</code></td>
+</tr>
+<tr>
+<td>Ubuntu all version</td>
+<td>launch &quot;Characters&quot; application</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<hr>
+<h2 id="%F0%9F%93%8A-mermaid">📊 Mermaid</h2>
+<p>Mermaid is a synthax allowing you to create diagramm using text.</p>
+<ul>
+<li>https://github.com/mermaid-js/mermaid</li>
+<li>https://mermaid-js.github.io/mermaid-live-editor/</li>
+<li>https://github.com/mermaid-js/mermaid/blob/develop/docs/integrations.md</li>
+<li>https://mermaid-js.github.io/mermaid/#/</li>
+</ul>
+<p><img src="header.png" alt="image"></p>
+<div style="display:flex; color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column;">
+<div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #0C5460">📝 Note : </div>
+<div>
+<p>Gitlab support mermaid synthax and Github recently add support for mermaid synthax : <a href="https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/">2022-02-14 github article</a></p>
+</div>
+</div>
+<br>
+<h3 id="examples">Examples</h3>
+<p>The following are some examples of the diagrams, charts and graphs that can be made using Mermaid.</p>
+<h4 id="flowchart">Flowchart</h4>
+<pre><code class="language-mermaid"><div class="mermaid">flowchart LR
+
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+</div></code></pre>
+<pre class="hljs"><code><div>flowchart LR
+
+A[Hard] --&gt;|Text| B(Round)
+B --&gt; C{Decision}
+C --&gt;|One| D[Result 1]
+C --&gt;|Two| E[Result 2]
+</div></code></pre>
+<br>
+<h4 id="sequence-diagram">Sequence diagram</h4>
+<pre><code class="language-mermaid"><div class="mermaid">sequenceDiagram
+Alice->>John: Hello John, how are you?
+loop Healthcheck
+    John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
+</div></code></pre>
+<pre class="hljs"><code><div>sequenceDiagram
+Alice-&gt;&gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&gt;&gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&gt;&gt;Alice: Great!
+John-&gt;&gt;Bob: How about you?
+Bob--&gt;&gt;John: Jolly good!
+</div></code></pre>
+<br>
+<h4 id="gantt-chart">Gantt chart</h4>
+<pre><code class="language-mermaid"><div class="mermaid">gantt
+    section Section
+    Completed :done,    des1, 2014-01-06,2014-01-08
+    Active        :active,  des2, 2014-01-07, 3d
+    Parallel 1   :         des3, after des1, 1d
+    Parallel 2   :         des4, after des1, 1d
+    Parallel 3   :         des5, after des3, 1d
+    Parallel 4   :         des6, after des4, 1d
+</div></code></pre>
+<pre class="hljs"><code><div>gantt
+    section Section
+    Completed :done,    des1, 2014-01-06,2014-01-08
+    Active        :active,  des2, 2014-01-07, 3d
+    Parallel 1   :         des3, after des1, 1d
+    Parallel 2   :         des4, after des1, 1d
+    Parallel 3   :         des5, after des3, 1d
+    Parallel 4   :         des6, after des4, 1d
+</div></code></pre>
+<br>
+<h4 id="class-diagram">Class diagram</h4>
+<pre><code class="language-mermaid"><div class="mermaid">classDiagram
+Class01 <|-- AveryLongClass : Cool
+<<Interface>> Class01
+Class09 --> C2 : Where am i?
+Class09 --* C3
+Class09 --|> Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  <<service>>
+  int id
+  size()
+}
+</div></code></pre>
+<pre class="hljs"><code><div>classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+&lt;&lt;Interface&gt;&gt; Class01
+Class09 --&gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &lt;&lt;service&gt;&gt;
+  int id
+  size()
+}
+</div></code></pre>
+<br>
+<h4 id="state-diagram">State diagram</h4>
+<pre><code class="language-mermaid"><div class="mermaid">stateDiagram-v2
+[*] --> Still
+Still --> [*]
+Still --> Moving
+Moving --> Still
+Moving --> Crash
+Crash --> [*]
+</div></code></pre>
+<pre class="hljs"><code><div>stateDiagram-v2
+[*] --&gt; Still
+Still --&gt; [*]
+Still --&gt; Moving
+Moving --&gt; Still
+Moving --&gt; Crash
+Crash --&gt; [*]
+</div></code></pre>
+<br>
+<h4 id="pie-chart">Pie chart</h4>
+<pre><code class="language-mermaid"><div class="mermaid">pie
+"Dogs" : 386
+"Cats" : 85
+"Rats" : 15
+</div></code></pre>
+<pre class="hljs"><code><div>pie
+&quot;Dogs&quot; : 386
+&quot;Cats&quot; : 85
+&quot;Rats&quot; : 15
+</div></code></pre>
+<br>
+<br>
+<hr>
+<h2 id="%E2%9C%92%EF%B8%8F-basic-markdwown-synthaxe">✒️ Basic markdwown synthaxe</h2>
+<ul>
+<li>https://github.com/Kernix13/markdown-cheatsheet#back-to-top</li>
+<li>https://kernixwebdesign.com/website/code/markdown-cheat-sheet-beginners/</li>
+<li>https://github.com/luong-komorebi/Markdown-Tutorial</li>
+<li>https://www.w3schools.io/file/markdown-introduction/</li>
+</ul>
+
+</body>
+</html>

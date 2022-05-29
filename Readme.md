@@ -59,15 +59,21 @@ I wasn't able to find something really nice so I create some sample getting insp
 
 Like apidoc-markdown use EJS template file in reality you can create awesome template with that like you can use javascript synthaxe inside your template to add logic. In futur, I will certainly create a template for apidoc-markdown but for the moment I just create some reflexion sample : 
 
+**That's will work only if you use an extension like markdown-viewer or if you read the markdown file using visual studio code**
+
 
 ### POST
 
+|Not extended|Extended|
+|---|---|
+|![image](POST_NotExtended.PNG)|![image](POST_Extended.PNG)|
+
 <details>
-    <summary style="color:transparent;">
-        <pre class="notranslate" style="background-color:green; color: white;display:flex; flex-direction: row;">            
-        <div style="padding:5px; background-color:lightgreen;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:green;"> POST </div>
-        <div style="padding:5px;">/define</div>
-        <div style="padding:5px;  ">🔐</div>
+<summary style="color:transparent;">
+<pre class="notranslate" style="background-color:green; color: white;display:flex; flex-direction: row;">            
+<div style="padding:5px; background-color:lightgreen;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:green;"> POST </div>
+<div style="padding:5px;">/define</div>
+<div style="padding:5px;  ">🔐</div>
 </pre></summary>
 
 <div style="border:dashed green; border-radius: 0px 0px 5px 5px; border-top:transparent; position:relative; top: -17px; background-color: transparence; padding: 17px 17px 17px 17px">
@@ -124,6 +130,9 @@ Some content here...
 
 ### PUT
 
+|Not extended|Extended|
+|---|---|
+|![image](PUT_NotExtended.PNG)|![image](PUT_Extended.PNG)|
 
 <details>
     <summary style="color:transparent;">
@@ -186,6 +195,10 @@ Some content here...
 
 ### GET
 
+|Not extended|Extended|
+|---|---|
+|![image](GET_NotExtended.PNG)|![image](GET_Extended.PNG)|
+
 <details>
     <summary style="color:transparent;">
         <pre class="notranslate" style="background-color:#1565c0; color: white;display:flex; flex-direction: row;">            
@@ -245,6 +258,10 @@ Some content here...
 <br>
 
 ### DELETE
+
+|Not extended|Extended|
+|---|---|
+|![image](DELETE_NotExtended.PNG)|![image](DELETE_Extended.PNG)|
 
 <details>
     <summary style="color:transparent;">
