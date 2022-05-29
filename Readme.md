@@ -61,12 +61,24 @@ Like apidoc-markdown use EJS template file in reality you can create awesome tem
 
 **That's will work only if you use an extension like markdown-viewer or if you read the markdown file using visual studio code**
 
+* Post not extended :
+
+![image](POST_NotExtended.PNG)
+
+* Post extended :
+  
+![image](POST_Extended.PNG)
+
 
 ### POST
 
 |Not extended|Extended|
 |---|---|
 |![image](POST_NotExtended.PNG)|![image](POST_Extended.PNG)|
+
+
+<details>
+<summary>result</summary>
 
 <details>
 <summary style="color:transparent;">
@@ -89,6 +101,8 @@ Some content here...
 ||||
 
 </div>
+
+</details>
 
 </details>
 
@@ -135,6 +149,9 @@ Some content here...
 |![image](PUT_NotExtended.PNG)|![image](PUT_Extended.PNG)|
 
 <details>
+<summary>result</summary>
+
+<details>
     <summary style="color:transparent;">
         <pre class="notranslate" style="background-color:orange; color: white;display:flex; flex-direction: row;">            
         <div style="padding:5px; background-color:#fed8b1;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:orange;"> PUT </div>
@@ -155,6 +172,8 @@ Some content here...
 ||||
 
 </div>
+
+</details>
 
 </details>
 
@@ -199,6 +218,10 @@ Some content here...
 |---|---|
 |![image](GET_NotExtended.PNG)|![image](GET_Extended.PNG)|
 
+
+<details>
+<summary>result</summary>
+
 <details>
     <summary style="color:transparent;">
         <pre class="notranslate" style="background-color:#1565c0; color: white;display:flex; flex-direction: row;">            
@@ -220,6 +243,8 @@ Some content here...
 ||||
 
 </div>
+
+</details>
 
 </details>
 
@@ -264,6 +289,9 @@ Some content here...
 |![image](DELETE_NotExtended.PNG)|![image](DELETE_Extended.PNG)|
 
 <details>
+<summary>result</summary>
+
+<details>
     <summary style="color:transparent;">
         <pre class="notranslate" style="background-color:red; color: white;display:flex; flex-direction: row;">            
         <div style="padding:5px; background-color:#f2bbc5;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:red;"> DELETE </div>
@@ -284,6 +312,8 @@ Some content here...
 ||||
 
 </div>
+
+</details>
 
 </details>
 

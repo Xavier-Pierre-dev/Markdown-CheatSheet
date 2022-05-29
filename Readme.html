@@ -460,6 +460,14 @@ code {
 <p>I wasn't able to find something really nice so I create some sample getting inspiration from swagger style documentation. In order to do this I use inline css directly inside html and markdown as the same time.</p>
 <p>Like apidoc-markdown use EJS template file in reality you can create awesome template with that like you can use javascript synthaxe inside your template to add logic. In futur, I will certainly create a template for apidoc-markdown but for the moment I just create some reflexion sample :</p>
 <p><strong>That's will work only if you use an extension like markdown-viewer or if you read the markdown file using visual studio code</strong></p>
+<ul>
+<li>Post not extended :</li>
+</ul>
+<p><img src="POST_NotExtended.PNG" alt="image"></p>
+<ul>
+<li>Post extended :</li>
+</ul>
+<p><img src="POST_Extended.PNG" alt="image"></p>
 <h3 id="post">POST</h3>
 <table>
 <thead>
@@ -475,6 +483,8 @@ code {
 </tr>
 </tbody>
 </table>
+<details>
+<summary>result</summary>
 <details>
 <summary style="color:transparent;">
 <pre class="notranslate" style="background-color:green; color: white;display:flex; flex-direction: row;">            
@@ -512,6 +522,7 @@ code {
 </tbody>
 </table>
 </div>
+</details>
 </details>
 <details>
 <summary>POST code</summary>
@@ -558,6 +569,8 @@ Some content here...
 </tbody>
 </table>
 <details>
+<summary>result</summary>
+<details>
     <summary style="color:transparent;">
         <pre class="notranslate" style="background-color:orange; color: white;display:flex; flex-direction: row;">            
         <div style="padding:5px; background-color:#fed8b1;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:orange;"> PUT </div>
@@ -594,6 +607,7 @@ Some content here...
 </tbody>
 </table>
 </div>
+</details>
 </details>
 <details>
 <summary>PUT code</summary>
@@ -640,6 +654,8 @@ Some content here...
 </tbody>
 </table>
 <details>
+<summary>result</summary>
+<details>
     <summary style="color:transparent;">
         <pre class="notranslate" style="background-color:#1565c0; color: white;display:flex; flex-direction: row;">            
         <div style="padding:5px; background-color:lightblue;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:#1565c0;"> GET </div>
@@ -676,6 +692,7 @@ Some content here...
 </tbody>
 </table>
 </div>
+</details>
 </details>
 <details>
 <summary>GET code</summary>
@@ -722,6 +739,8 @@ Some content here...
 </tbody>
 </table>
 <details>
+<summary>result</summary>
+<details>
     <summary style="color:transparent;">
         <pre class="notranslate" style="background-color:red; color: white;display:flex; flex-direction: row;">            
         <div style="padding:5px; background-color:#f2bbc5;width:60px; border-radius:1em; align-items: center; text-align:center; font-weight:900; color:red;"> DELETE </div>
@@ -759,6 +778,7 @@ Some content here...
 </table>
 </div>
 </details>
+</details>
 <details>
 <summary>DELETE code</summary>
 <pre class="hljs"><code><div>
@@ -792,13 +812,18 @@ Some content here...
 <hr>
 <h2 id="%F0%9F%93%9D-markdown-note">📝 Markdown note</h2>
 <p>It's also possible to use html inside markdown in order to enhance the readability of your document, here it's few example :</p>
+<p><strong>That's will work only if you use an extension like markdown-viewer or if you read the markdown file using visual studio code</strong></p>
 <h3 id="note">note</h3>
+<p><img src="note_1.PNG" alt="image"></p>
+<details>
+<summary>result</summary>
 <div style="color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px;">
 <div style="font-size:200%; float:left;">📝</div>
 <div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+</details>
 <details>
 <summary>code</summary>
 <pre class="hljs"><code><div>&lt;div style=&quot;color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px;&quot;&gt;
@@ -809,12 +834,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 &lt;/div&gt;
 </div></code></pre>
 </details>
+<br>
+<p><img src="note_2.PNG" alt="image"></p>
+<details>
+<summary>result</summary>
 <div style="display:flex; color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column;">
 <div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #0C5460">📝 Note : </div>
 <div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+</details>
 <details>
 <summary>code</summary>
 <pre class="hljs"><code><div>&lt;div style=&quot;display:flex; color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column;&quot;&gt;
@@ -827,12 +857,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </details>
 <br>
 <h3 id="tips">tips</h3>
+<p><img src="tips_1.PNG" alt="image"></p>
+<details>
+<summary>result</summary>
 <div style="background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; color: #155724">
 <div style="font-size:200%; float:left; ">💡</div>
 <div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+</details>
 <details>
 <summary>code</summary>
 <pre class="hljs"><code><div>&lt;div style=&quot;background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; color: #155724&quot;&gt;
@@ -843,12 +877,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 &lt;/div&gt;
 </div></code></pre>
 </details>
+<br>
+<p><img src="tips_2.PNG" alt="image"></p>
+<details>
+<summary>result</summary>
 <div style="display:flex; background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #155724">
 <div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #155724">💡 Tip : </div>
 <div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+</details>
 <details>
 <summary>code</summary>
 <pre class="hljs"><code><div>&lt;div style=&quot;display:flex; background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #155724&quot;&gt;
@@ -862,12 +901,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </details>
 <br>
 <h3 id="warning">warning</h3>
+<p><img src="warning_1.PNG" alt="image"></p>
+<details>
+<summary>result</summary>
 <div style="background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; color: #ffe0b2">
 <div style="font-size:200%; float:left; ">⚠️</div>
 <div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+</details>
 <details>
 <summary>code</summary>
 <pre class="hljs"><code><div>&lt;div style=&quot;background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; color: #ffe0b2&quot;&gt;
@@ -878,12 +921,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 &lt;/div&gt;
 </div></code></pre>
 </details>
+<br>
+<p><img src="warning_2.PNG" alt="image"></p>
+<details>
+<summary>result</summary>
 <div style="display:flex; background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #ffe0b2">
 <div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #ffe0b2">⚠️ Warning : </div>
 <div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+</details>
 <details>
 <summary>code</summary>
 <pre class="hljs"><code><div>&lt;div style=&quot;display:flex; background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #ffe0b2&quot;&gt;
