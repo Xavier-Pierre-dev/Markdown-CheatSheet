@@ -61,6 +61,14 @@ Like apidoc-markdown use EJS template file in reality you can create awesome tem
 
 **That's will work only if you use an extension like markdown-viewer or if you read the markdown file using visual studio code**
 
+<div align="center">
+
+|visual studio code extension|markdown viewer extension|
+|---|---|
+|<div align="center">[![image](Markdown_Preview.png)](https://github.com/mjbvz/vscode-github-markdown-preview-style)</div><ul><li>[Github](https://github.com/mjbvz/vscode-github-markdown-preview-style)</li><li>[visual studio marketplace](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)</li></ul>|<div align="center">[![image](markdown_viewer.png)](https://github.com/simov/markdown-viewer)</div></li><ul><li>[Chrome](https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk)</li><li>[Firefox](https://addons.mozilla.org/en-US/firefox/addon/markdown-viewer-chrome/)</li><li>[Opera](https://addons.opera.com/en/extensions/details/install-chrome-extensions/)</li><li>[Edge](https://microsoftedge.microsoft.com/addons/detail/markdown-viewer/cgfmehpekedojlmjepoimbfcafopimdg)</li></ul>|
+
+</div>
+
 * Post not extended :
 
 ![image](POST_NotExtended.PNG)
