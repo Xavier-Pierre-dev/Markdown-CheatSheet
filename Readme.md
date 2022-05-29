@@ -329,7 +329,14 @@ ___
 
 It's also possible to use html inside markdown in order to enhance the readability of your document, here it's few example : 
 
+**That's will work only if you use an extension like markdown-viewer or if you read the markdown file using visual studio code**
+
 ### note
+
+![image](note_1.PNG)
+
+<details>
+<summary>result</summary>
 
 <div style="color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px;">
 <div style="font-size:200%; float:left;">📝</div>
@@ -337,6 +344,8 @@ It's also possible to use html inside markdown in order to enhance the readabili
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+
+</details>
 
 <details>
 <summary>code</summary>
@@ -352,8 +361,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </details>
 
+<br>
 
+![image](note_2.PNG)
 
+<details>
+<summary>result</summary>
 
 <div style="display:flex; color:black; background:lightblue; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column;">
 <div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #0C5460">📝 Note : </div>
@@ -361,6 +374,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+
+</details>
 
 <details>
 <summary>code</summary>
@@ -381,12 +396,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### tips
 
+![image](tips_1.PNG)
+
+<details>
+<summary>result</summary>
+
 <div style="background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; color: #155724">
 <div style="font-size:200%; float:left; ">💡</div>
 <div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+
+</details>
 
 
 <details>
@@ -403,6 +425,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </details>
 
+<br>
+
+![image](tips_2.PNG)
+
+<details>
+<summary>result</summary>
 
 <div style="display:flex; background:#D4EDDA; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #155724">
 <div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #155724">💡 Tip : </div>
@@ -411,6 +439,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+
+</details>
 
 <details>
 <summary>code</summary>
@@ -431,12 +461,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### warning
 
+![image](warning_1.PNG)
+
+<details>
+<summary>result</summary>
+
 <div style="background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; color: #ffe0b2">
 <div style="font-size:200%; float:left; ">⚠️</div>
 <div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+
+</details>
 
 <details>
 <summary>code</summary>
@@ -452,6 +489,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </details>
 
+<br>
+
+![image](warning_2.PNG)
+
+<details>
+<summary>result</summary>
 
 <div style="display:flex; background:#e65100; padding:5px; padding-bottom:10px ; border-radius:5px; flex-direction: column; color: #ffe0b2">
 <div style="font-size:125%; float:left; align-items: center; text-align:left; font-weight:700; color: #ffe0b2">⚠️ Warning : </div>
@@ -460,6 +503,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus aenean vel. Urna nec tincidunt praesent semper feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna. Ac tortor dignissim convallis aenean et tortor. Adipiscing elit pellentesque habitant morbi tristique senectus. Nisi vitae suscipit tellus mauris a diam. Nunc vel risus commodo viverra maecenas accumsan.
 </div>
 </div>
+
+</details>
 
 <details>
 <summary>code</summary>
